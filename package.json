@@ -1,0 +1,29 @@
+{
+  "name": "chilean-accounting-tools",
+  "version": "1.0.0",
+  "description": "Accounting tool for simplifying tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsugg/chilean-accounting-tools.git"
+  },
+  "keywords": [
+    "sii",
+    "accounting",
+    "chile",
+    "contabilidad",
+    "servicio",
+    "de",
+    "impuestos",
+    "internos"
+  ],
+  "author": "Juan Sugg Gilbert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsugg/chilean-accounting-tools/issues"
+  },
+  "homepage": "https://github.com/jsugg/chilean-accounting-tools#readme"
+}
