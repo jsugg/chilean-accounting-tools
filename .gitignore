@@ -1,5 +1,5 @@
 # Logs
-logs
+logs/*
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -68,10 +68,6 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
@@ -102,3 +98,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# TLS Certificates
+certs/
+
+# Environment variables
+config/**/.env*
+.env*
+
+server.pid
