@@ -1,4 +1,5 @@
 const appPath = require('app-root-path');
+
 function getEnvironmentPath() {
     const environment = process.env.NODE_ENV;
     const environmentMap = {
