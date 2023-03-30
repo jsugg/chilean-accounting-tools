@@ -106,4 +106,8 @@ certs/
 config/**/.env*
 .env*
 
+# NodeJS
+package-lock.json
+
+# app specific
 server.pid
