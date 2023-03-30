@@ -12,13 +12,13 @@ const pino = require( 'pino' );
 const pretty = require( 'pino-pretty' );
 const pinoHttp = require( 'pino-http' );
 
-fs.writeFileSync(`${appPath}/server.pid`, process.pid.toString());
+process.env['SERVER_PID'] = process.pid.toString();
 
 const LOGS_FOLDER = process.env.LOGS_FOLDER;
 const LOG_FILE = `${appPath}/${LOGS_FOLDER}/${hostname} ${username} ${packageJSON.name} ${packageJSON.version} [${Date.now()}] pid:${process.pid}.log`;
 
 const streams = [
-    { level: 'debug', stream: process.env.PINO_LOG_FILE? fs.createWriteStream(LOG_FILE) : process.stdout },
+    { level: 'debug', stream: process.env.PINO_LOG_FILE? ( () => { fs.mkdir(`${appPath}/${LOGS_FOLDER}`, { recursive: true }).catch(console.error); fs.createWriteStream(LOG_FILE); } )() : process.stdout },
     { stream: pretty() }
 ];
 const appLogger = pino({
